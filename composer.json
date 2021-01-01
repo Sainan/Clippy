@@ -1,0 +1,11 @@
+{
+    "name": "sainan/clippy",
+    "type": "library",
+	"homepage": "https://github.com/Sainan/Clippy",
+    "license": "Unlicense",
+    "autoload": {
+    	"psr-4": {
+    		"Clippy\\": "src/"
+    	}
+    }
+}
