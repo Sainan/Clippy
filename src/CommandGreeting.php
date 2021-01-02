@@ -4,7 +4,7 @@ class CommandGreeting extends Command
 {
 	static function instantiateIfMatches(string $in): ?Command
 	{
-		if(preg_match("/(^| )(hi|hello|greetings|how (are|r) (yo)?u)($| |\.|!|\?)/i", $in) === 1)
+		if(preg_match("/".self::REGEX_WORD_BEGIN."(hi|hello|greetings|how (are|r) ".self::REGEX_YOU.")".self::REGEX_WORD_END."/i", $in) === 1)
 		{
 			return new self;
 		}

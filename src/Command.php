@@ -5,6 +5,10 @@ abstract class Command
 {
 	private static array $registered_commands = [];
 
+	const REGEX_WORD_BEGIN = "(^| )";
+	const REGEX_WORD_END = "($| |\.|!|\?)";
+	const REGEX_YOU = "(you|ya|u)";
+
 	static function registerCommand(string $command): void
 	{
 		if(!is_subclass_of($command, self::class))
