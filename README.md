@@ -20,8 +20,4 @@ you can either implement a case for this, or just use `->getDefaultResponse()`, 
 
 > `composer require sainan/clippy`
 
-Have a look at [example.php](https://github.com/Sainan/Clippy/blob/senpai/example.php) for an example on how to integrate it.
-
----
-
-Stay tuned for more.
+Have a look at [example.php](https://github.com/Sainan/Clippy/blob/senpai/example.php) for an example on how to integrate Clippy.
