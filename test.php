@@ -30,6 +30,12 @@ function testCommandJokeKnockKnock()
 	Nose::assert($inst instanceof CommandJokeKnockKnock);
 }
 
+function testCommandOpinion()
+{
+	$inst = Command::match("What do you think about PHP?");
+	Nose::assert($inst instanceof CommandOpinion);
+}
+
 function testCustomCommand()
 {
 	class CommandCustomTest extends Command

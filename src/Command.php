@@ -56,4 +56,5 @@ Command::registerCommands([
 	CommandJokeProgramming::class,
 	CommandJokeKnockKnock::class,
 	CommandJokeGeneral::class,
+	CommandOpinion::class,
 ]);
