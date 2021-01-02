@@ -18,7 +18,7 @@ you can either implement a case for this, or just use `->getDefaultResponse()`, 
 
 ## Getting Started
 
-> `composer require sainan/clippy:dev-senpai`
+> `composer require sainan/clippy`
 
 Have a look at [example.php](https://github.com/Sainan/Clippy/blob/senpai/example.php) for an example on how to integrate it.
 
