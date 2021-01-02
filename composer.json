@@ -9,7 +9,7 @@
 		}
 	},
 	"require": {
-		"php": "^8.0",
+		"php": ">=8.0",
 		"sainan/jokes": "^1.0"
 	},
 	"require-dev": {
