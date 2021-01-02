@@ -63,4 +63,5 @@ Command::registerCommands([
 	CommandOpinion::class,
 	CommandThanks::class,
 	CommandGreeting::class,
+	CommandFarewell::class,
 ]);

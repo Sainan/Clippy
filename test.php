@@ -48,6 +48,12 @@ function testCommandGreeting()
 	Nose::assert($inst instanceof CommandGreeting);
 }
 
+function testCommandFarewell()
+{
+	$inst = Command::match("Goodbye");
+	Nose::assert($inst instanceof CommandFarewell);
+}
+
 function testCustomCommand()
 {
 	class CommandCustomTest extends Command
