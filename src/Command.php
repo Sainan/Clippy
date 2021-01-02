@@ -58,4 +58,5 @@ Command::registerCommands([
 	CommandJokeGeneral::class,
 	CommandOpinion::class,
 	CommandThanks::class,
+	CommandGreeting::class,
 ]);

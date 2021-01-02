@@ -42,6 +42,12 @@ function testCommandThanks()
 	Nose::assert($inst instanceof CommandThanks);
 }
 
+function testCommandGreeting()
+{
+	$inst = Command::match("Hello");
+	Nose::assert($inst instanceof CommandGreeting);
+}
+
 function testCustomCommand()
 {
 	class CommandCustomTest extends Command
