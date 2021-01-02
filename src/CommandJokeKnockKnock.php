@@ -6,7 +6,7 @@ class CommandJokeKnockKnock extends Command
 	{
 		if(preg_match("/knock([- ]?knock)? joke/i", $in) === 1)
 		{
-			return new CommandJokeKnockKnock();
+			return new self;
 		}
 		return null;
 	}

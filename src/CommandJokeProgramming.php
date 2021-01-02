@@ -6,7 +6,7 @@ class CommandJokeProgramming extends Command
 	{
 		if(preg_match("/programm(ing|er) joke/i", $in) === 1)
 		{
-			return new CommandJokeProgramming();
+			return new self;
 		}
 		return null;
 	}

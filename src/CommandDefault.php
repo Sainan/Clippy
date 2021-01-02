@@ -4,7 +4,7 @@ class CommandDefault extends Command
 {
 	static function instantiateIfMatches(string $in) : ?CommandDefault
 	{
-		return new CommandDefault();
+		return null;
 	}
 
 	function getDefaultResponse() : string

@@ -10,7 +10,7 @@ class CommandDelete extends CommandImplementable
 	{
 		if(preg_match("/(delete|erase)( the)?( last)? ?(?'amount'\d+) ?me?s?sa?ge?s?/i", $in, $matches) === 1)
 		{
-			return new CommandDelete($matches["amount"]);
+			return new self($matches["amount"]);
 		}
 		return null;
 	}

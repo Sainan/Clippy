@@ -6,7 +6,7 @@ class CommandJokeGeneral extends Command
 	{
 		if(str_contains($in, "joke"))
 		{
-			return new CommandJokeGeneral();
+			return new self;
 		}
 		return null;
 	}
