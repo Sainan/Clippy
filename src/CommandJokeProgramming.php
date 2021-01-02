@@ -4,7 +4,7 @@ class CommandJokeProgramming extends Command
 {
 	static function instantiateIfMatches(string $in): ?Command
 	{
-		if(str_contains($in, "programming joke"))
+		if(preg_match("/programm(ing|er) joke/i", $in) === 1)
 		{
 			return new CommandJokeProgramming();
 		}
