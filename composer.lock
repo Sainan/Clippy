@@ -4,8 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6cdcc37cddcdcc076faa338d4ae7a570",
-    "packages": [],
+    "content-hash": "103bbc7efdea377103a75ac0137d0e43",
+    "packages": [
+        {
+            "name": "sainan/jokes",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sainan/Jokes.git",
+                "reference": "b7203cb4cc51ff31140133a7cc1bac93b9552597"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sainan/Jokes/zipball/b7203cb4cc51ff31140133a7cc1bac93b9552597",
+                "reference": "b7203cb4cc51ff31140133a7cc1bac93b9552597",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sainan\\Jokes\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Unlicense"
+            ],
+            "homepage": "https://github.com/Sainan/Jokes",
+            "support": {
+                "issues": "https://github.com/Sainan/Jokes/issues",
+                "source": "https://github.com/Sainan/Jokes/tree/v1.0"
+            },
+            "time": "2021-01-02T11:19:13+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "hell-sh/nose",

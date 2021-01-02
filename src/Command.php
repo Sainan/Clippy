@@ -6,6 +6,9 @@ abstract class Command
 	{
 		return [
 			CommandDelete::class,
+			CommandJokeProgramming::class,
+			CommandJokeKnockKnock::class,
+			CommandJokeGeneral::class,
 		];
 	}
 
