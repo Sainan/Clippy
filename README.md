@@ -1,4 +1,4 @@
-# Clippy [![Build Status](https://travis-ci.com/Sainan/Clippy.svg?branch=senpai)](https://travis-ci.com/Sainan/Clippy)
+# Clippy
 
 A framework for bots that take human commands.
 

@@ -1,9 +1,0 @@
-language: php
-php:
-  - '8.0'
-cache:
-  directories:
-    - vendor
-script:
-  - composer install
-  - vendor/bin/nose
