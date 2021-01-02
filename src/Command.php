@@ -2,20 +2,20 @@
 namespace Clippy;
 abstract class Command
 {
-	static function get_all_commands() : array
+	static function getAllCommands() : array
 	{
 		return [
 			CommandDelete::class,
 		];
 	}
 
-	abstract static function instantiate_if_matches(string $in) : ?Command;
+	abstract static function instantiateIfMatches(string $in) : ?Command;
 
 	static function match(string $in) : Command
 	{
-		foreach(Command::get_all_commands() as $command)
+		foreach(Command::getAllCommands() as $command)
 		{
-			$ret = call_user_func($command.'::instantiate_if_matches', $in);
+			$ret = call_user_func($command.'::instantiateIfMatches', $in);
 			if($ret instanceof Command)
 			{
 				return $ret;

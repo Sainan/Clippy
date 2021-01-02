@@ -6,7 +6,7 @@ class CommandDelete extends CommandImplementable
 		public int $amount,
 	) {}
 
-	static function instantiate_if_matches(string $in) : ?CommandDelete
+	static function instantiateIfMatches(string $in) : ?CommandDelete
 	{
 		if(preg_match("/(delete|erase)( the)?( last)? ?(?'amount'\d+) ?me?s?sa?ge?s?/i", $in, $matches) === 1)
 		{
