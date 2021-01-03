@@ -2,7 +2,7 @@
 namespace Clippy;
 class CommandJokeKnockKnock extends Command
 {
-	static function instantiateIfMatches(string $in): ?Command
+	static function instantiateIfMatches(string $in): ?self
 	{
 		if(preg_match("/knock([- ]?knock)? joke/i", $in) === 1)
 		{

@@ -2,7 +2,7 @@
 namespace Clippy;
 class CommandGreeting extends Command
 {
-	static function instantiateIfMatches(string $in): ?Command
+	static function instantiateIfMatches(string $in): ?self
 	{
 		if(preg_match("/".self::REGEX_WORD_BEGIN."(hi|hello|greetings|how (are|r) ".self::REGEX_YOU.")".self::REGEX_WORD_END."/i", $in) === 1)
 		{

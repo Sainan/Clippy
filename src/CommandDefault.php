@@ -2,7 +2,7 @@
 namespace Clippy;
 class CommandDefault extends Command
 {
-	static function instantiateIfMatches(string $in) : ?CommandDefault
+	static function instantiateIfMatches(string $in) : ?self
 	{
 		return null;
 	}

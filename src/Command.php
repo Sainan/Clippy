@@ -37,7 +37,7 @@ abstract class Command
 		return self::getRegisteredCommands();
 	}
 
-	abstract static function instantiateIfMatches(string $in) : ?Command;
+	abstract static function instantiateIfMatches(string $in) : ?self;
 
 	static function match(string $in) : Command
 	{

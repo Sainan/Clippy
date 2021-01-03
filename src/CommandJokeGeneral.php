@@ -2,7 +2,7 @@
 namespace Clippy;
 class CommandJokeGeneral extends Command
 {
-	static function instantiateIfMatches(string $in): ?Command
+	static function instantiateIfMatches(string $in): ?self
 	{
 		if(str_contains($in, "joke"))
 		{
