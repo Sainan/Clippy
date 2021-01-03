@@ -13,5 +13,6 @@ var searchData=
   ['commandjokeknockknock_10',['CommandJokeKnockKnock',['../class_clippy_1_1_command_joke_knock_knock.html',1,'Clippy']]],
   ['commandjokeprogramming_11',['CommandJokeProgramming',['../class_clippy_1_1_command_joke_programming.html',1,'Clippy']]],
   ['commandopinion_12',['CommandOpinion',['../class_clippy_1_1_command_opinion.html',1,'Clippy']]],
-  ['commandthanks_13',['CommandThanks',['../class_clippy_1_1_command_thanks.html',1,'Clippy']]]
+  ['commandrandomised_13',['CommandRandomised',['../class_clippy_1_1_command_randomised.html',1,'Clippy']]],
+  ['commandthanks_14',['CommandThanks',['../class_clippy_1_1_command_thanks.html',1,'Clippy']]]
 ];
