@@ -54,6 +54,20 @@ function testCommandFarewell()
 	Nose::assert($inst instanceof CommandFarewell);
 }
 
+function testCommandConvertDistance()
+{
+	$inst = Command::match("What's 100 yards in metres?");
+	Nose::assert($inst instanceof CommandConvertDistance);
+	Nose::assertEquals($inst->out_amount, 91.44);
+}
+
+function testCommandConvertWeight()
+{
+	$inst = Command::match("What's 1 metric ton in US tons?");
+	Nose::assert($inst instanceof CommandConvertWeight);
+	Nose::assert($inst->out_amount >= 1.102 && $inst->out_amount < 1.103);
+}
+
 function testCustomCommand()
 {
 	class CommandCustomTest extends Command

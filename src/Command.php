@@ -64,4 +64,6 @@ Command::registerCommands([
 	CommandThanks::class,
 	CommandGreeting::class,
 	CommandFarewell::class,
+	CommandConvertDistance::class,
+	CommandConvertWeight::class,
 ]);
