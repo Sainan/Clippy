@@ -1,6 +1,6 @@
 <?php
 namespace Clippy;
-class CommandJokeProgramming extends Command
+class CommandJokeProgramming extends CommandRandomised
 {
 	static function instantiateIfMatches(string $in): ?self
 	{
