@@ -18,7 +18,7 @@ you can either implement a case for this, or just use `->getDefaultResponse()`, 
 
 > "I'm sorry, I can't do that in this form."
 
-You can find a list of all commands [here](https://sainan.github.io/Clippy/inherits.html).
+You can find a list of all commands [here](https://docs.clippy.chat/inherits.html).
 
 ## Getting Started
 
