@@ -96,9 +96,9 @@ Collaboration diagram for Clippy\CommandConvert:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a95fa4f90e0378cb0859b0951d4c96c28"><td class="memItemLeft" align="right" valign="top"><a id="a95fa4f90e0378cb0859b0951d4c96c28"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__construct</b> (public int $in_amount, public string $in_unit, public float $out_amount, public string $out_unit,)</td></tr>
-<tr class="separator:a95fa4f90e0378cb0859b0951d4c96c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1ef6fbeb46c0c3049d4992315908ea"><td class="memItemLeft" align="right" valign="top"><a id="a3b1ef6fbeb46c0c3049d4992315908ea"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>__construct</b> (public float $in_amount, public string $in_unit, public float $out_amount, public string $out_unit,)</td></tr>
+<tr class="separator:a3b1ef6fbeb46c0c3049d4992315908ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc6644cff72e61a98ba244729bbf35b6"><td class="memItemLeft" align="right" valign="top"><a id="adc6644cff72e61a98ba244729bbf35b6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>getDefaultResponse</b> ()</td></tr>
 <tr class="separator:adc6644cff72e61a98ba244729bbf35b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,9 +108,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c356aca8d001ead39a8f12d70482af4"><td class="memItemLeft" align="right" valign="top"><a id="a8c356aca8d001ead39a8f12d70482af4"></a>
 static&#160;</td><td class="memItemRight" valign="bottom"><b>instantiateIfMatches</b> (string $in)</td></tr>
 <tr class="separator:a8c356aca8d001ead39a8f12d70482af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18c3ef289f7a29ddb3785af1da4c0758"><td class="memItemLeft" align="right" valign="top"><a id="a18c3ef289f7a29ddb3785af1da4c0758"></a>
-static&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> (int|float $value, string $unit)</td></tr>
-<tr class="separator:a18c3ef289f7a29ddb3785af1da4c0758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2565d7f1b7e8f4a8211f70096ade2ae0"><td class="memItemLeft" align="right" valign="top"><a id="a2565d7f1b7e8f4a8211f70096ade2ae0"></a>
+static&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> (float $value, ?string $unit=null)</td></tr>
+<tr class="separator:a2565d7f1b7e8f4a8211f70096ade2ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_clippy_1_1_command"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_clippy_1_1_command')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_clippy_1_1_command.html">Clippy\Command</a></td></tr>
 <tr class="memitem:aa06fa29157b638b1b42adfe0d0bc3747 inherit pub_static_methods_class_clippy_1_1_command"><td class="memItemLeft" align="right" valign="top"><a id="aa06fa29157b638b1b42adfe0d0bc3747"></a>
 static&#160;</td><td class="memItemRight" valign="bottom"><b>registerCommand</b> (string $command)</td></tr>
@@ -139,6 +139,9 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>REGEX_WORD_END</b> =
 <tr class="memitem:aa9071fae0df754b272977a6e1da93e59 inherit pub_attribs_class_clippy_1_1_command"><td class="memItemLeft" align="right" valign="top"><a id="aa9071fae0df754b272977a6e1da93e59"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>REGEX_YOU</b> = &quot;(you|ya|u)&quot;</td></tr>
 <tr class="separator:aa9071fae0df754b272977a6e1da93e59 inherit pub_attribs_class_clippy_1_1_command"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad66b72f45130a2a7feef73607e39f70e inherit pub_attribs_class_clippy_1_1_command"><td class="memItemLeft" align="right" valign="top"><a id="ad66b72f45130a2a7feef73607e39f70e"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>REGEX_FLOAT</b> = &quot;(\d+(\.\d+)?)&quot;</td></tr>
+<tr class="separator:ad66b72f45130a2a7feef73607e39f70e inherit pub_attribs_class_clippy_1_1_command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/CommandConvert.php</li>
