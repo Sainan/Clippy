@@ -66,6 +66,10 @@ function testCommandConvertWeight()
 	$inst = Command::match("What's 1 metric ton in US tons?");
 	Nose::assert($inst instanceof CommandConvertWeight);
 	Nose::assert($inst->out_amount >= 1.102 && $inst->out_amount < 1.103);
+
+	$inst = Command::match("1.5kg in grams");
+	Nose::assert($inst instanceof CommandConvertWeight);
+	Nose::assertEquals($inst->out_amount, 1500.0);
 }
 
 function testCustomCommand()

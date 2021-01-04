@@ -8,6 +8,7 @@ abstract class Command
 	const REGEX_WORD_BEGIN = "(^| )";
 	const REGEX_WORD_END = "($| |\.|!|\?)";
 	const REGEX_YOU = "(you|ya|u)";
+	const REGEX_FLOAT = "(\d+(\.\d+)?)";
 
 	static function registerCommand(string $command): void
 	{
