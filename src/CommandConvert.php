@@ -34,6 +34,6 @@ abstract class CommandConvert extends Command
 
 	function getDefaultResponse(): string
 	{
-		return static::format($this->in_amount, $this->in_unit)." ".($this->in_amount == 1 ? "is" : "are")." about equal to ".static::format($this->out_amount, $this->out_unit).". :)";
+		return self::format($this->in_amount, $this->in_unit)." ".($this->in_amount == 1 ? "is" : "are")." about equal to ".self::format($this->out_amount, $this->out_unit).". :)";
 	}
 }
