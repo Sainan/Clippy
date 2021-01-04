@@ -11,21 +11,12 @@ abstract class CommandConvert extends Command
 
 	static function instantiateIfMatches(string $in): ?static
 	{
-		$units = [];
-		foreach(array_keys(static::CONVERSION) as $unit)
-		{
-			$units[$unit] = $unit;
-		}
-		foreach(static::NAME as $string_name => $english_name)
-		{
-			$units[strtolower($english_name)] = explode("_", $string_name)[0];
-		}
-		$units_regex = join("|", array_keys($units));
+		$units_regex = join("|", array_keys(static::IN_NAME));
 		if(preg_match("/".self::REGEX_WORD_BEGIN."(?'in_amount'".self::REGEX_FLOAT.") ?(?'in_unit'$units_regex) (in|to) ?(?'out_unit'$units_regex)".self::REGEX_WORD_END."/i", $in, $matches) === 1)
 		{
 			$in_amount = floatval($matches["in_amount"]);
-			$in_unit = $units[strtolower($matches["in_unit"])];
-			$out_unit = $units[strtolower($matches["out_unit"])];
+			$in_unit = static::IN_NAME[strtolower($matches["in_unit"])];
+			$out_unit = static::IN_NAME[strtolower($matches["out_unit"])];
 			return new static(
 				$in_amount,
 				$in_unit,
@@ -38,7 +29,7 @@ abstract class CommandConvert extends Command
 
 	static function format(float $value, string $unit): string
 	{
-		return (is_float($value) ? number_format($value, static::PRECISION[$unit]) : $value)." ".($value == 1 ? static::NAME[$unit."_singular"] : static::NAME[$unit."_plural"]);
+		return (is_float($value) ? number_format($value, static::PRECISION[$unit]) : $value)." ".($value == 1 ? static::OUT_NAME[$unit."_singular"] : static::OUT_NAME[$unit."_plural"]);
 	}
 
 	function getDefaultResponse(): string

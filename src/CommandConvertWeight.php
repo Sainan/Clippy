@@ -26,7 +26,35 @@ class CommandConvertWeight extends CommandConvert
 		"imperialtons" => 3
 	];
 
-	const NAME = [
+	const IN_NAME = [
+		"g" => "g",
+		"kg" => "kg",
+		"ustons" => "ustons",
+		"metrictons" => "metrictons",
+		"imperialtons" => "imperialtons",
+		"gram" => "g",
+		"grams" => "g",
+		"kilogram" => "kg",
+		"kilograms" => "kg",
+		"kilo" => "kg",
+		"kilos" => "kg",
+		"ounce" => "ounces",
+		"ounces" => "ounces",
+		"pound" => "pounds",
+		"pounds" => "pounds",
+		"stone" => "stones",
+		"stones" => "stones",
+		"hundredweight" => "hundredweights",
+		"hundredweights" => "hundredweights",
+		"us ton" => "ustons",
+		"us tons" => "ustons",
+		"metric ton" => "metrictons",
+		"metric tons" => "metrictons",
+		"imperial ton" => "imperialtons",
+		"imperial tons" => "imperialtons",
+	];
+
+	const OUT_NAME = [
 		"g_singular" => "gram",
 		"g_plural" => "grams",
 		"kg_singular" => "kilogram",

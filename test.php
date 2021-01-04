@@ -59,6 +59,10 @@ function testCommandConvertDistance()
 	$inst = Command::match("What's 100 yards in metres?");
 	Nose::assert($inst instanceof CommandConvertDistance);
 	Nose::assertEquals($inst->out_amount, 91.44);
+
+	$inst = Command::match("What's 1 metre in meters?");
+	Nose::assert($inst instanceof CommandConvertDistance);
+	Nose::assertEquals($inst->out_amount, 1.0);
 }
 
 function testCommandConvertWeight()
@@ -67,7 +71,7 @@ function testCommandConvertWeight()
 	Nose::assert($inst instanceof CommandConvertWeight);
 	Nose::assert($inst->out_amount >= 1.102 && $inst->out_amount < 1.103);
 
-	$inst = Command::match("1.5kg in grams");
+	$inst = Command::match("1.5 kilos in grams");
 	Nose::assert($inst instanceof CommandConvertWeight);
 	Nose::assertEquals($inst->out_amount, 1500.0);
 }

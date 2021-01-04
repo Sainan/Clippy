@@ -28,7 +28,42 @@ class CommandConvertDistance extends CommandConvert
 		"mi" => 3,
 	];
 
-	const NAME = [
+	const IN_NAME = [
+		"cm" => "cm",
+		"m" => "m",
+		"km" => "km",
+		"in" => "in",
+		"ft" => "ft",
+		"mi" => "mi",
+		"centimetre" => "cm",
+		"centimetres" => "cm",
+		"metre" => "m",
+		"metres" => "m",
+		"kilometre" => "km",
+		"kilometres" => "km",
+		"centimeter" => "cm",
+		"centimeters" => "cm",
+		"meter" => "m",
+		"meters" => "m",
+		"kilometer" => "km",
+		"kilometers" => "km",
+		"inch" => "in",
+		"inches" => "in",
+		"foot" => "ft",
+		"feet" => "ft",
+		"yard" => "yards",
+		"yards" => "yards",
+		"rod" => "rods",
+		"rods" => "rods",
+		"chain" => "chains",
+		"chains" => "chains",
+		"furlong" => "furlongs",
+		"furlongs" => "furlongs",
+		"mile" => "mi",
+		"miles" => "mi",
+	];
+
+	const OUT_NAME = [
 		"cm_singular" => "centimetre",
 		"cm_plural" => "centimetres",
 		"m_singular" => "metre",
