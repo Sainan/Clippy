@@ -27,9 +27,25 @@ abstract class CommandConvert extends Command
 		return null;
 	}
 
-	static function format(float $value, string $unit): string
+	static function format(float $value, ?string $unit = null): string
 	{
-		return (is_float($value) ? number_format($value, static::PRECISION[$unit]) : $value)." ".($value == 1 ? static::OUT_NAME[$unit."_singular"] : static::OUT_NAME[$unit."_plural"]);
+		if($unit !== null)
+		{
+			return self::format($value)." ".($value == 1 ? static::OUT_NAME[$unit."_singular"] : static::OUT_NAME[$unit."_plural"]);
+		}
+		if(!is_float($value))
+		{
+			return $value;
+		}
+		for($i = 6; $i > 1; $i--)
+		{
+			$str = number_format($value, 6);
+			if(substr($str, -1) != "0")
+			{
+				return $str;
+			}
+		}
+		return $value;
 	}
 
 	function getDefaultResponse(): string
