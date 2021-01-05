@@ -31,7 +31,7 @@ abstract class CommandConvert extends Command
 	{
 		if($unit !== null)
 		{
-			return self::format($value)." ".($value == 1 ? static::OUT_NAME[$unit."_singular"] : static::OUT_NAME[$unit."_plural"]);
+			return self::format($value)." ".($value == 1 ? self::$out_lang[$unit."_singular"] : self::$out_lang[$unit."_plural"]);
 		}
 		if(!is_float($value))
 		{
@@ -50,6 +50,10 @@ abstract class CommandConvert extends Command
 
 	function getDefaultResponse(): string
 	{
-		return self::format($this->in_amount, $this->in_unit)." ".($this->in_amount == 1 ? "is" : "are")." about equal to ".self::format($this->out_amount, $this->out_unit).". :)";
+		return sprintf(
+			self::$out_lang[$this->in_amount == 1 ? "convert_singular" : "convert_plural"],
+			self::format($this->in_amount, $this->in_unit),
+			self::format($this->out_amount, $this->out_unit)
+		);
 	}
 }

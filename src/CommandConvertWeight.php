@@ -53,25 +53,4 @@ class CommandConvertWeight extends CommandConvert
 		"imperial ton" => "imperialtons",
 		"imperial tons" => "imperialtons",
 	];
-
-	const OUT_NAME = [
-		"g_singular" => "gram",
-		"g_plural" => "grams",
-		"kg_singular" => "kilogram",
-		"kg_plural" => "kilograms",
-		"ounces_singular" => "ounce",
-		"ounces_plural" => "ounces",
-		"pounds_singular" => "pound",
-		"pounds_plural" => "pounds",
-		"stones_singular" => "stone",
-		"stones_plural" => "stones",
-		"hundredweights_singular" => "hundredweight",
-		"hundredweights_plural" => "hundredweights",
-		"ustons_singular" => "US ton",
-		"ustons_plural" => "US tons",
-		"metrictons_singular" => "metric ton",
-		"metrictons_plural" => "metric tons",
-		"imperialtons_singular" => "imperial ton",
-		"imperialtons_plural" => "imperial tons",
-	];
 }

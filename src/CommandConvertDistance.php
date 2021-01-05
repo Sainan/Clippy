@@ -62,27 +62,4 @@ class CommandConvertDistance extends CommandConvert
 		"mile" => "mi",
 		"miles" => "mi",
 	];
-
-	const OUT_NAME = [
-		"cm_singular" => "centimetre",
-		"cm_plural" => "centimetres",
-		"m_singular" => "metre",
-		"m_plural" => "metres",
-		"km_singular" => "kilometre",
-		"km_plural" => "kilometres",
-		"in_singular" => "inch",
-		"in_plural" => "inches",
-		"ft_singular" => "foot",
-		"ft_plural" => "feet",
-		"yards_singular" => "yard",
-		"yards_plural" => "yards",
-		"rods_singular" => "rod",
-		"rods_plural" => "rods",
-		"chains_singular" => "chain",
-		"chains_plural" => "chains",
-		"furlongs_singular" => "furlong",
-		"furlongs_plural" => "furlongs",
-		"mi_singular" => "mile",
-		"mi_plural" => "miles",
-	];
 }

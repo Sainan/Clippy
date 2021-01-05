@@ -4,21 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb0bb0227d4e4246b6276951d1b38f2d",
+    "content-hash": "f3676333dfdd8dbf84beb967eeb4dd64",
     "packages": [
         {
             "name": "sainan/jokes",
-            "version": "v1.0",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sainan/Jokes.git",
-                "reference": "b7203cb4cc51ff31140133a7cc1bac93b9552597"
+                "reference": "2849b78defa75417e10727c843f5d1a0acd6ac49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sainan/Jokes/zipball/b7203cb4cc51ff31140133a7cc1bac93b9552597",
-                "reference": "b7203cb4cc51ff31140133a7cc1bac93b9552597",
+                "url": "https://api.github.com/repos/Sainan/Jokes/zipball/2849b78defa75417e10727c843f5d1a0acd6ac49",
+                "reference": "2849b78defa75417e10727c843f5d1a0acd6ac49",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
             },
             "type": "library",
             "autoload": {
@@ -33,25 +36,28 @@
             "homepage": "https://github.com/Sainan/Jokes",
             "support": {
                 "issues": "https://github.com/Sainan/Jokes/issues",
-                "source": "https://github.com/Sainan/Jokes/tree/v1.0"
+                "source": "https://github.com/Sainan/Jokes/tree/v1.0.2"
             },
-            "time": "2021-01-02T11:19:13+00:00"
+            "time": "2021-01-02T23:09:44+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "hell-sh/nose",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hell-sh/Nose.git",
-                "reference": "01910dd980b4e0b0244f50b20148955498ca8f20"
+                "reference": "51450f8e91fc7f51ea688b399e0dae8c7465b788"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hell-sh/Nose/zipball/01910dd980b4e0b0244f50b20148955498ca8f20",
-                "reference": "01910dd980b4e0b0244f50b20148955498ca8f20",
+                "url": "https://api.github.com/repos/hell-sh/Nose/zipball/51450f8e91fc7f51ea688b399e0dae8c7465b788",
+                "reference": "51450f8e91fc7f51ea688b399e0dae8c7465b788",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
             },
             "bin": [
                 "nose"
@@ -71,9 +77,9 @@
             "homepage": "https://github.com/hell-sh/Nose",
             "support": {
                 "issues": "https://github.com/hell-sh/Nose/issues",
-                "source": "https://github.com/hell-sh/Nose/tree/master"
+                "source": "https://github.com/hell-sh/Nose/tree/v1.1.1"
             },
-            "time": "2019-06-25T13:22:02+00:00"
+            "time": "2021-01-05T18:34:37+00:00"
         }
     ],
     "aliases": [],

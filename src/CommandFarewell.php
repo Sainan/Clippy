@@ -13,6 +13,6 @@ class CommandFarewell extends Command
 
 	function getDefaultResponse(): string
 	{
-		return "Goodbye!";
+		return self::$out_lang["farewell"];
 	}
 }

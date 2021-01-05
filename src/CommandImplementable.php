@@ -4,6 +4,6 @@ abstract class CommandImplementable extends Command
 {
 	function getDefaultResponse() : string
 	{
-		return "I'm sorry, I can't do that in this form. :|";
+		return self::$out_lang["implementable"];
 	}
 }

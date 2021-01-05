@@ -13,6 +13,6 @@ class CommandGreeting extends Command
 
 	function getDefaultResponse(): string
 	{
-		return "Hello!";
+		return self::$out_lang["greeting"];
 	}
 }

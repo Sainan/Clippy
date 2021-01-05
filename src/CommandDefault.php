@@ -9,6 +9,6 @@ class CommandDefault extends Command
 
 	function getDefaultResponse() : string
 	{
-		return "I'm sorry, I don't understand. :/";
+		return self::$out_lang["default"];
 	}
 }

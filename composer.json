@@ -14,6 +14,6 @@
 		"sainan/jokes": "^1.0"
 	},
 	"require-dev": {
-		"hell-sh/nose": "^1.1"
+		"hell-sh/nose": "^1.1.1"
 	}
 }

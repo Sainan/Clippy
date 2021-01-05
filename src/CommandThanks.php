@@ -13,6 +13,6 @@ class CommandThanks extends Command
 
 	function getDefaultResponse(): string
 	{
-		return "You're welcome! :D";
+		return self::$out_lang["thanks"];
 	}
 }

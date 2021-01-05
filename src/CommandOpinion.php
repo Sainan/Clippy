@@ -13,6 +13,6 @@ class CommandOpinion extends Command
 
 	function getDefaultResponse(): string
 	{
-		return "I don't have an opinion on that. :)";
+		return self::$out_lang["opinion"];
 	}
 }
