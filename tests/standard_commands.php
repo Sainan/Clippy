@@ -75,25 +75,3 @@ function testCommandConvertWeight()
 	Nose::assert($inst instanceof CommandConvertWeight);
 	Nose::assertEquals($inst->out_amount, 1500.0);
 }
-
-function testCustomCommand()
-{
-	class CommandCustomTest extends Command
-	{
-		static function instantiateIfMatches(string $in): ?Command
-		{
-			return str_contains($in, "test") ? new self : null;
-		}
-
-		function getDefaultResponse(): string
-		{
-			return "";
-		}
-	}
-
-	Nose::assert(Command::match("test") instanceof CommandDefault);
-
-	Command::registerCommand(CommandCustomTest::class);
-
-	Nose::assert(Command::match("test") instanceof CommandCustomTest);
-}
