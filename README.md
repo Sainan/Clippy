@@ -1,4 +1,4 @@
-# Clippy
+# Clippy ![](https://github.com/Sainan/Clippy/workflows/Unit%20Tests/badge.svg)
 
 A framework for bots that take human commands.
 
