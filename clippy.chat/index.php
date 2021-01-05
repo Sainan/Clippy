@@ -1,3 +1,8 @@
+<?php
+require "vendor/autoload.php";
+$locales = Clippy\Command::getOutputLocales();
+$lang=(empty($_GET["lang"])||!in_array($_GET["lang"],$locales))?"en-GB":$_GET["lang"];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,15 +13,27 @@
 	<div class="uk-container uk-container-expand uk-margin-top">
 		<h1>Talk to Clippy</h1>
 		<form method="GET" action="/">
+			<p>
+				Output Locale: <select name="lang">
+					<?php
+					foreach($locales as $locale)
+					{
+						?>
+						<option<?=($locale==$lang?" selected":"")?>><?=$locale;?></option>
+						<?php
+					}
+					?>
+				</select>
+			</p>
 			<input class="uk-input" type="text" name="message" value="<?=htmlspecialchars(@$_GET['message']);?>"<?=(empty($_GET["message"])?" autofocus":"");?> />
 		</form>
 		<?php
 		if(!empty($_GET["message"]))
 		{
-			require "vendor/autoload.php";
 			$is_rand = empty($_GET["seed"]);
 			$seed = $is_rand ? rand() : intval($_GET["seed"]);
 			srand($seed);
+			Clippy\Command::setOutputLocale($lang);
 			$command = Clippy\Command::match($_GET["message"]);
 			?>
 			<p class="uk-h3"><i>Clippy says</i> <?=nl2br($command->getDefaultResponse());?></p>
@@ -29,13 +46,13 @@
 					if($is_rand)
 					{
 						?>
-						<p>This message is randomised; use <a href="/?message=<?=urlencode($_GET['message']);?>&seed=<?=$seed;?>" rel="noreferer">a static link</a> if you want to share it.</p>
+						<p>This message is randomised; use <a href="/?lang=<?=$lang;?>&message=<?=urlencode($_GET['message']);?>&seed=<?=$seed;?>" rel="noreferer">a static link</a> if you want to share it.</p>
 						<?php
 					}
 					else
 					{
 						?>
-						<p>You're using a static link so the message is always the same; <a href="/?message=<?=urlencode($_GET['message']);?>" rel="noreferer">click here for a random response</a>.</p>
+						<p>You're using a static link so the message is always the same; <a href="/?lang=<?=$lang;?>&message=<?=urlencode($_GET['message']);?>" rel="noreferer">click here for a random response</a>.</p>
 						<?php
 					}
 					?>
