@@ -1,5 +1,6 @@
 {
 	"name": "sainan/clippy",
+	"description": "A framework for bots that take human commands.",
 	"type": "library",
 	"homepage": "https://github.com/Sainan/Clippy",
 	"license": "Unlicense",
