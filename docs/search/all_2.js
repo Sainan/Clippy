@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getallcommands_16',['getAllCommands',['../class_clippy_1_1_command.html#a43d1128de41c09255ffe273ce9daf791',1,'Clippy::Command']]]
+  ['deprecated_20list_17',['Deprecated List',['../deprecated.html',1,'']]]
 ];
