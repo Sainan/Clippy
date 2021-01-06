@@ -7,7 +7,7 @@ class CommandDefault extends Command
 		return null;
 	}
 
-	function getDefaultResponse() : string
+	function getResponse() : string
 	{
 		return self::$out_lang["default"];
 	}

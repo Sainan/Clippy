@@ -18,7 +18,7 @@ function initCommandConvertDistance(): CommandConvertDistance
 
 function testDefaultENGB()
 {
-	Nose::assertEquals(initCommandConvertDistance()->getDefaultResponse(), "1 metre is about equal to 1 metre. :)");
+	Nose::assertEquals(initCommandConvertDistance()->getResponse(), "1 metre is about equal to 1 metre. :)");
 }
 
 function testENGB()
@@ -30,7 +30,7 @@ function testENGB()
 function testENUS()
 {
 	Command::setOutputLocale("en-US");
-	Nose::assertEquals(initCommandConvertDistance()->getDefaultResponse(), "1 meter is about equal to 1 meter. :)");
+	Nose::assertEquals(initCommandConvertDistance()->getResponse(), "1 meter is about equal to 1 meter. :)");
 }
 
 function testENAU()
@@ -38,5 +38,5 @@ function testENAU()
 	Command::setOutputLocale("en-AU");
 	$inst = Command::match("Hi");
 	Nose::assert($inst instanceof CommandGreeting);
-	Nose::assertEquals($inst->getDefaultResponse(), "G'day!");
+	Nose::assertEquals($inst->getResponse(), "G'day!");
 }

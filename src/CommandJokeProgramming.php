@@ -11,7 +11,7 @@ class CommandJokeProgramming extends CommandRandomised
 		return null;
 	}
 
-	function getDefaultResponse(): string
+	function getResponse(): string
 	{
 		return \Sainan\Jokes\Programming::getRandom();
 	}

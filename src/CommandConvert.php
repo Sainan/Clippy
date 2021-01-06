@@ -48,7 +48,7 @@ abstract class CommandConvert extends Command
 		return $value;
 	}
 
-	function getDefaultResponse(): string
+	function getResponse(): string
 	{
 		return sprintf(
 			self::$out_lang[$this->in_amount == 1 ? "convert_singular" : "convert_plural"],

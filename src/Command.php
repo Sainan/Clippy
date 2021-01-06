@@ -79,7 +79,14 @@ abstract class Command
 		return new CommandDefault();
 	}
 
-	abstract function getDefaultResponse() : string;
+	/** @since 0.1.8 */
+	abstract function getResponse() : string;
+
+	/** @deprecated */
+	function getDefaultResponse(): string
+	{
+		return $this->getResponse();
+	}
 }
 
 Command::registerCommands([

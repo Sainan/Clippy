@@ -12,7 +12,7 @@ function testCustomCommand()
 			return str_contains($in, "test") ? new self : null;
 		}
 
-		function getDefaultResponse(): string
+		function getResponse(): string
 		{
 			return "";
 		}

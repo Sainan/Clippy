@@ -14,7 +14,7 @@ class CommandCustomExample extends Command
 		return str_contains($in, "example") ? new self : null;
 	}
 
-	function getDefaultResponse(): string
+	function getResponse(): string
 	{
 		return "This is indeed an example!";
 	}
@@ -31,6 +31,6 @@ switch($command::class)
 	break;
 
 	default:
-	echo $command->getDefaultResponse();
+	echo $command->getResponse();
 }
 echo "\n";

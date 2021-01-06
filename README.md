@@ -14,7 +14,7 @@ will generate the equivalent of
 new CommandDelete(/* amount = */ 10)
 ```
 
-you can either implement a case for this, or just use `->getDefaultResponse()`, which in this case would be:
+you can either implement a case for this, or just use `->getResponse()`, which in this case would be:
 
 > "I'm sorry, I can't do that in this form."
 

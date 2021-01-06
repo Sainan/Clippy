@@ -36,7 +36,7 @@ $lang=(empty($_GET["lang"])||!in_array($_GET["lang"],$locales))?"en-GB":$_GET["l
 			Clippy\Command::setOutputLocale($lang);
 			$command = Clippy\Command::match($_GET["message"]);
 			?>
-			<p class="uk-h3"><i>Clippy says</i> <?=nl2br($command->getDefaultResponse());?></p>
+			<p class="uk-h3"><i>Clippy says</i> <?=nl2br($command->getResponse());?></p>
 			<?php
 			if(is_subclass_of($command::class, Clippy\CommandRandomised::class))
 			{
@@ -60,7 +60,7 @@ $lang=(empty($_GET["lang"])||!in_array($_GET["lang"],$locales))?"en-GB":$_GET["l
 				<?php
 			}
 			?>
-			<p>This message was returned by calling <code>-&gt;getDefaultResponse()</code> on</p>
+			<p>This message was returned by calling <code>-&gt;getResponse()</code> on</p>
 			<pre><?php var_dump($command); ?></pre>
 			<p>which was the result of <code>Clippy\Command::match($_GET["message"])</code></p>
 			<hr>

@@ -11,7 +11,7 @@ class CommandOpinion extends Command
 		return null;
 	}
 
-	function getDefaultResponse(): string
+	function getResponse(): string
 	{
 		return self::$out_lang["opinion"];
 	}

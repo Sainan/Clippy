@@ -2,7 +2,7 @@
 namespace Clippy;
 abstract class CommandImplementable extends Command
 {
-	function getDefaultResponse() : string
+	function getResponse() : string
 	{
 		return self::$out_lang["implementable"];
 	}
