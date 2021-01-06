@@ -52,7 +52,7 @@ abstract class Command
 		$locales = [];
 		foreach(scandir(self::DIR_LANG) as $file)
 		{
-			if($file != "." && $file != ".." && $file != "README.md")
+			if($file != "." && $file != ".." && is_dir(self::DIR_LANG.$file))
 			{
 				array_push($locales, $file);
 			}
@@ -97,6 +97,26 @@ abstract class Command
 		}
 		return self::$out_langs[self::$config["out_lang"]][$key] ?? $key;
 	}
+
+	static function stringify($value): string
+	{
+		if(is_float($value))
+		{
+			for($i = 6; $i > 1; $i--)
+			{
+				$str = number_format($value, 6);
+				if(substr($str, -1) != "0")
+				{
+					return $str;
+				}
+			}
+		}
+		if(is_bool($value))
+		{
+			return $value ? "true" : "false";
+		}
+		return (string)$value;
+	}
 }
 
 Command::registerCommands([
@@ -110,4 +130,5 @@ Command::registerCommands([
 	CommandFarewell::class,
 	CommandConvertDistance::class,
 	CommandConvertWeight::class,
+	CommandArithmetics::class,
 ]);

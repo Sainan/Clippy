@@ -75,3 +75,10 @@ function testCommandConvertWeight()
 	Nose::assert($inst instanceof CommandConvertWeight);
 	Nose::assertEquals($inst->out_amount, 1500.0);
 }
+
+function testCommandArithmetics()
+{
+	$inst = Command::match("2 + 2 = ?");
+	Nose::assert($inst instanceof CommandArithmetics);
+	Nose::assertEquals($inst->getResponse(), "That expression evaluated to 4. :)");
+}

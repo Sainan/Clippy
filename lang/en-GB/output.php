@@ -1,5 +1,19 @@
 <?php
 return [
+	"default" => "I'm sorry, I don't understand. :/",
+
+	"farewell" => "Goodbye!",
+
+	"greeting" => "Hello!",
+
+	"implementable" => "I'm sorry, I can't do that in this embodiment. :|",
+
+	"opinion" => "I don't have an opinion on that. :)",
+
+	"thanks" => "You're welcome! :D",
+
+	"arithmetics" => "That expression evaluated to %s. :)",
+
 	// CommandConvert
 	"convert_singular" => "%s is about equal to %s. :)",
 	"convert_plural" => "%s are about equal to %s. :)",
@@ -43,16 +57,4 @@ return [
 	"metrictons_plural" => "metric tons",
 	"imperialtons_singular" => "imperial ton",
 	"imperialtons_plural" => "imperial tons",
-	// CommandDefault
-	"default" => "I'm sorry, I don't understand. :/",
-	// CommandFarewell
-	"farewell" => "Goodbye!",
-	// CommandGreeting
-	"greeting" => "Hello!",
-	// CommandImplementable
-	"implementable" => "I'm sorry, I can't do that in this embodiment. :|",
-	// CommandOpinion
-	"opinion" => "I don't have an opinion on that. :)",
-	// CommandThanks
-	"thanks" => "You're welcome! :D",
 ];

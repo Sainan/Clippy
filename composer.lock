@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3676333dfdd8dbf84beb967eeb4dd64",
+    "content-hash": "3004dd60d402c7975d6667c6a531658f",
     "packages": [
+        {
+            "name": "madorin/matex",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/madorin/matex.git",
+                "reference": "e51afda599927f0f70e39849083d41b6b3160cd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/madorin/matex/zipball/e51afda599927f0f70e39849083d41b6b3160cd9",
+                "reference": "e51afda599927f0f70e39849083d41b6b3160cd9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Matex\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dorin Marcoci",
+                    "email": "dorin.marcoci@gmail.com",
+                    "homepage": "https://www.marcodor.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Mathematical expression parser and evaluator",
+            "homepage": "https://github.com/madorin/matex",
+            "keywords": [
+                "eval",
+                "evaluator",
+                "expression",
+                "formula",
+                "math",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/madorin/matex/issues",
+                "source": "https://github.com/madorin/matex"
+            },
+            "time": "2021-01-02T23:31:44+00:00"
+        },
         {
             "name": "sainan/jokes",
             "version": "v1.0.2",
