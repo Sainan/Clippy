@@ -4,6 +4,6 @@ abstract class CommandImplementable extends Command
 {
 	function getResponse() : string
 	{
-		return self::$out_lang["implementable"];
+		return self::translate("implementable");
 	}
 }

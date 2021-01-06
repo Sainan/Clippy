@@ -12,7 +12,12 @@ abstract class Command
 
 	private static array $registered_commands = [];
 
-	static array $out_lang = [];
+	/** @since 0.1.8 */
+	static array $config = [
+		"out_lang" => "en-GB",
+	];
+
+	static array $out_langs = [];
 
 	static function registerCommand(string $command): void
 	{
@@ -57,17 +62,13 @@ abstract class Command
 
 	static function setOutputLocale(string $name) : void
 	{
-		self::$out_lang = require __DIR__."/../lang/{$name}/output.php";
+		self::$config["out_lang"] = $name;
 	}
 
 	abstract static function instantiateIfMatches(string $in) : ?self;
 
 	static function match(string $in) : Command
 	{
-		if(empty(self::$out_lang))
-		{
-			self::setOutputLocale("en-GB");
-		}
 		foreach(Command::getRegisteredCommands() as $command)
 		{
 			$ret = call_user_func($command.'::instantiateIfMatches', $in);
@@ -86,6 +87,15 @@ abstract class Command
 	function getDefaultResponse(): string
 	{
 		return $this->getResponse();
+	}
+
+	static function translate(string $key): string
+	{
+		if(!array_key_exists(self::$config["out_lang"], self::$out_langs))
+		{
+			self::$out_langs[self::$config["out_lang"]] = require __DIR__."/../lang/".self::$config["out_lang"]."/output.php";
+		}
+		return self::$out_langs[self::$config["out_lang"]][$key] ?? $key;
 	}
 }
 

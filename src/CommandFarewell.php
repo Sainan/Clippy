@@ -13,6 +13,6 @@ class CommandFarewell extends Command
 
 	function getResponse(): string
 	{
-		return self::$out_lang["farewell"];
+		return self::translate("farewell");
 	}
 }

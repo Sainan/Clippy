@@ -13,6 +13,6 @@ class CommandOpinion extends Command
 
 	function getResponse(): string
 	{
-		return self::$out_lang["opinion"];
+		return self::translate("opinion");
 	}
 }
