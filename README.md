@@ -6,7 +6,7 @@ A framework for bots that take human commands.
 
 ## An Example
 
-> "Delete the last 10 messages"
+> Delete the last 10 messages
 
 will generate the equivalent of
 
@@ -16,7 +16,7 @@ new CommandDelete(/* amount = */ 10)
 
 you can either implement a case for this, or just use `->getResponse()`, which in this case would be:
 
-> "I'm sorry, I can't do that in this form."
+> I'm sorry, I can't do that in this embodiment. :|
 
 You can find a list of all commands [here](https://docs.clippy.chat/inherits.html).
 
