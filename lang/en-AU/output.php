@@ -50,7 +50,7 @@ return [
 	// CommandGreeting
 	"greeting" => "G'day!",
 	// CommandImplementable
-	"implementable" => "I'm sorry, I can't do that in this form. :|",
+	"implementable" => "I'm sorry, I can't do that in this embodiment. :|",
 	// CommandOpinion
 	"opinion" => "I don't have an opinion on that. :)",
 	// CommandThanks
