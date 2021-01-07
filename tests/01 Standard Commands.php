@@ -80,5 +80,5 @@ function testCommandArithmetics()
 {
 	$inst = Command::match("2 + 2 = ?");
 	Nose::assert($inst instanceof CommandArithmetics);
-	Nose::assertEquals($inst->getResponse(), "That expression evaluated to 4. :)");
+	Nose::assert($inst->out == 4);
 }
