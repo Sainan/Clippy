@@ -12,7 +12,7 @@ return [
 
 	"thanks" => "You're welcome! :D",
 
-	"arithmetics" => "That expression evaluated to %s. :)",
+	"arithmetics" => "That expression evaluates to %s. :)",
 
 	// CommandConvert
 	"convert_singular" => "%s is about equal to %s. :)",
