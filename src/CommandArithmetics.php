@@ -8,6 +8,11 @@ class CommandArithmetics extends Command
 		public string $out,
 	) {}
 
+	static function mod_impl($left, $right)
+	{
+		return $left % $right;
+	}
+
 	static function instantiateIfMatches(string $in): ?self
 	{
 		if(preg_match("/\d+ ?[+\-*\/] ?\d+/i", $in) === 1)
@@ -15,6 +20,12 @@ class CommandArithmetics extends Command
 			try
 			{
 				$evaluator = new \Matex\Evaluator();
+				$evaluator->functions = [
+					"mod" => [
+						"ref" => self::class."::mod_impl",
+						"arc" => 2,
+					],
+				];
 				return new self(
 					$in,
 					self::stringify($evaluator->execute($in)),
