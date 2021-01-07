@@ -9,6 +9,7 @@ abstract class Command
 	const REGEX_WORD_END = "($| |\.|!|\?)";
 	const REGEX_YOU = "(you|ya|u)";
 	const REGEX_FLOAT = "(\d+(\.\d+)?)";
+	const REGEX_SPACE_OPT = " *";
 
 	private static array $registered_commands = [];
 

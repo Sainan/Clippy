@@ -12,7 +12,7 @@ abstract class CommandConvert extends Command
 	static function instantiateIfMatches(string $in): ?static
 	{
 		$units_regex = join("|", array_keys(static::IN_NAME));
-		if(preg_match("/".self::REGEX_WORD_BEGIN."(?'in_amount'".self::REGEX_FLOAT.") ?(?'in_unit'$units_regex) (in|to) ?(?'out_unit'$units_regex)".self::REGEX_WORD_END."/i", $in, $matches) === 1)
+		if(preg_match("/".self::REGEX_WORD_BEGIN."(?'in_amount'".self::REGEX_FLOAT.")".self::REGEX_SPACE_OPT."(?'in_unit'$units_regex)".self::REGEX_SPACE_OPT."(in|to)".self::REGEX_SPACE_OPT."(?'out_unit'$units_regex)".self::REGEX_WORD_END."/i", $in, $matches) === 1)
 		{
 			$in_amount = floatval($matches["in_amount"]);
 			$in_unit = static::IN_NAME[strtolower($matches["in_unit"])];

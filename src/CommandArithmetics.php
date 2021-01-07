@@ -15,7 +15,7 @@ class CommandArithmetics extends Command
 
 	static function instantiateIfMatches(string $in): ?self
 	{
-		if(preg_match("/\d+ ?[+\-*\/] ?\d+/i", $in) === 1)
+		if(preg_match("/\d+".self::REGEX_SPACE_OPT."[+\-*\/]".self::REGEX_SPACE_OPT."\d+/i", $in) === 1)
 		{
 			try
 			{
