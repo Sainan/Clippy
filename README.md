@@ -11,7 +11,7 @@ A framework for bots that take human commands.
 will generate the equivalent of
 
 ```PHP
-new CommandDelete(/* amount = */ 10)
+new CommandDelete(amount: 10)
 ```
 
 you can either implement a case for this, or just use `->getResponse()`, which in this case would be:
