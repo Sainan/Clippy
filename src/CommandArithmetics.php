@@ -13,6 +13,11 @@ class CommandArithmetics extends Command
 		return $left % $right;
 	}
 
+	static function sqrt_impl($val)
+	{
+		return sqrt($val);
+	}
+
 	static function instantiateIfMatches(string $in): ?self
 	{
 		if(preg_match("/\d+".self::REGEX_SPACE_OPT."[+\-*\/]".self::REGEX_SPACE_OPT."\d+/i", $in) === 1)
@@ -24,6 +29,10 @@ class CommandArithmetics extends Command
 					"mod" => [
 						"ref" => self::class."::mod_impl",
 						"arc" => 2,
+					],
+					"sqrt" => [
+						"ref" => self::class."::sqrt_impl",
+						"arc" => 1,
 					],
 				];
 				return new self(
